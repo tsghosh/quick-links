@@ -26,3 +26,19 @@
     # Trigger a reboot
     /usr/bin/sudo shutdown -r
 
+
+Remote Update one time using at
+
+Commands used with at:
+
+    at : execute commands at specified time.
+    atq : lists the pending jobs of users.
+    atrm : delete jobs by their job number.
+    
+    
+    at 9:00 AM
+    at> sh backup.sh
+    at> ^d
+    job 3 at 2013-03-23 09:00
+    
+    echo "sh backup.sh" | at 9:00 AM
