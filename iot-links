@@ -42,3 +42,9 @@ Commands used with at:
     job 3 at 2013-03-23 09:00
     
     echo "sh backup.sh" | at 9:00 AM
+    
+    
+  Install the "at" package.
+
+    sudo apt-get update
+    sudo apt-get install at
