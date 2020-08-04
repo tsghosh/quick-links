@@ -1,1 +1,28 @@
-https://linuxconfig.org/how-to-create-a-ubuntu-repository-server
+1. Private Repo for Raspberry PI
+  https://linuxconfig.org/how-to-create-a-ubuntu-repository-server
+  https://www.youtube.com/watch?v=vUKOAqVxVNM
+
+2. Remote update of a rapberry pi using cron
+
+    0 3 * * * /home/pi/myscriptname 2>&1 >/home/pi/myscriptoutput
+
+    1: Minute past the Hour to run the command on. As you want to run at 3:00, this is 0.
+    2: Hour of the Day. Obviously this is 3 for 3am.
+    3: Day of the month. Putting * means run every day.
+    4: Month of the Year. Again, * for every month.
+    5: Day of the Week. Every weekday is *.
+    Everything after that is the command(s) to run.
+
+
+    # First do apt-get update
+    /usr/bin/sudo apt-get update
+
+    # Then the upgrade
+    /usr/bin/sudo apt-get -y upgrade
+
+    # Finally rpi-update
+    /usr/bin/sudo rpi-update
+
+    # Trigger a reboot
+    /usr/bin/sudo shutdown -r
+
